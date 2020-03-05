@@ -27,7 +27,7 @@ import UIKit
 
     fileprivate func topMostController() -> UIViewController? {
 
-        var presentedVC = UIApplication.shared.keyWindow?.rootViewController
+        var presentedVC = UIApplication.shared.windows.first?.rootViewController
         while let pVC = presentedVC?.presentedViewController
         {
             presentedVC = pVC
